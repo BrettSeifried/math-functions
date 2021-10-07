@@ -85,13 +85,18 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-    const array = sumArr;
-    const sum4 = sumArr.reduce(sum, 0);
-    function sum(accumulator, a) {
-        return accumulator + a;
-    }
-    const string4 = `${array} was passed in as an array of numbers, and ${sum4} is their sum.`;
-    return [sum4, string4];
+    // const array = sumArr;
+    // const sum4 = sumArr.reduce(sum, 0);
+    // function sum(accumulator, a) {
+    //     return accumulator + a;
+    // }
+    // const string4 = `${array} was passed in as an array of numbers, and ${sum4} is their sum.`;
+    // return [sum4, string4];
+    const sum4 = sum(sumArr[0], sumArr[1])[0];
+    const sum42 = sum(sum4, sumArr[2])[0];
+    const string4 = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum42} is their sum.`;
+    return [sum42, string4];
+
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -114,7 +119,10 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+    const mult5 = multiply(multArr[0], multArr[1])[0];
+    const mult52 = multiply(mult5, multArr[2])[0];
+    const string4 = `The numbers ${multArr} have a product of ${mult52}.`;
+    return [mult52, string4];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
